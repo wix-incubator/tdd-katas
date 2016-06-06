@@ -1,0 +1,25 @@
+{
+  "name": "kata",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "lint": "eslint test src -c node_modules/a-wix-react-native-commons/.eslintrc",
+    "pretest": "npm run lint",
+    "test": "BABEL_ENV=test node node_modules/a-wix-react-native-commons/scripts/jasmineUnitRunner.js"
+  },
+  "dependencies": {
+    "a-wix-react-native-commons": "^1.0.0"
+  },
+  "babel": {
+    "env": {
+      "test": {
+        "presets": [
+          "es2015",
+          "react",
+          "stage-0"
+        ],
+        "retainLines": true
+      }
+    }
+  }
+}
