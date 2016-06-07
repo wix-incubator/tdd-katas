@@ -34,5 +34,5 @@ Made popular by [Roy Osherove](http://osherove.com/tdd-kata-1/). Write a method 
 5. Three numbers, delimited either way, returns the sum
 6. Negative numbers throw an exception
 7. Numbers greater than 1000 are ignored
-8. A single char delimiter can be defined on the first line (e.g. //# for a ‘#’ as the delimiter)
-9. A multi char delimiter can be defined on the first line (e.g. //[###] for ‘###’ as the delimiter)
+8. A single char delimiter can be defined on the first line (e.g. //#\n1#2 for a ‘#’ as the delimiter)
+9. A multi char delimiter can be defined on the first line (e.g. //###\n1###2 for ‘###’ as the delimiter)
