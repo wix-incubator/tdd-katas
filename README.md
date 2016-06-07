@@ -18,7 +18,7 @@ For a true TDD experience: use [wallaby.js](https://wallabyjs.com/) with the inc
 
 Which means the workflow is:
 
-1. Write a failing test. Stop writing the test as soon as it fails (Not compiling is failing).
+1. Write a failing test. Stop writing the test as soon as it fails.
 2. Write the minimal production code required for the test to pass. Stop writing any code once the test passes.
 3. Refactor the test code and the production code without altering the functionality. All tests should pass.
 
