@@ -12,7 +12,7 @@ For a true TDD experience: use [wallaby.js](https://wallabyjs.com/) with the inc
 # Katas
 
 ## String Calculator
-Made popular by Roy Osherove. Write a method that, given a delimited string, returns the sum of the values.
+Made popular by [Roy Osherove](http://osherove.com/tdd-kata-1/). Write a method that, given a delimited string, returns the sum of the values.
 
 1. An empty string returns zero
 2. A single number returns the value
