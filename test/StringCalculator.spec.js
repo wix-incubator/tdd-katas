@@ -1,4 +1,4 @@
-const uut = test.requireAbsolute('src/stringCalculator/StringCalculator');
+const StringCalculator = test.requireAbsolute('src/StringCalculator');
 
 describe('StringCalculator', () => {
 
@@ -76,10 +76,10 @@ describe('StringCalculator', () => {
   ];
 
   test.parameterized('add', params, (index, param) => {
-    expect(uut.add(param.input)).toEqual(param.result);
+    expect(StringCalculator.add(param.input)).toEqual(param.result);
   });
 
   it('throws exception on negative numbers', () => {
-    expect(() => uut.add('-1')).toThrow(new Error('negative numbers not supported'));
+    expect(() => StringCalculator.add('-1')).toThrow(new Error('negative numbers not supported'));
   });
 });
