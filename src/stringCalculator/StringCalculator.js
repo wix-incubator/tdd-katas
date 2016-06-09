@@ -8,11 +8,7 @@ export function add(values) {
   if (!values) {
     return 0;
   }
-  const numbers = rejectGreaterThan1000(parse(split(values)));
-  if (hasNegatives(numbers)) {
-    throw new Error('negative numbers not supported');
-  }
-  return sum(numbers);
+  return accumulate(assertNoNegatives(rejectGreaterThan1000(parse(split(values)))));
 }
 
 function split(values) {
@@ -36,9 +32,12 @@ function parse(strings) {
 function rejectGreaterThan1000(numbers) {
   return _.filter(numbers, (n) => n <= 1000);
 }
-function hasNegatives(numbers) {
-  return _.find(numbers, (n) => n < 0);
+function assertNoNegatives(numbers) {
+  if (_.find(numbers, (n) => n < 0)) {
+    throw new Error('negative numbers not supported');
+  }
+  return numbers;
 }
-function sum(numbers) {
+function accumulate(numbers) {
   return _.reduce(numbers, (total, n) => total + n, 0);
 }
