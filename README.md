@@ -25,7 +25,11 @@ Which means the workflow is:
 # Katas
 
 ## String Calculator
-Made popular by [Roy Osherove](http://osherove.com/tdd-kata-1/). Write a method that, given a delimited string, returns the sum of the values.
+Made popular by [Roy Osherove](http://osherove.com/tdd-kata-1/).
+
+This kata is one of the simplest and best ways to practice step-by-step fluent tdd, and provides an easy way to get proficient in a language.
+
+Write a function `add` under a module `StringCalculator` that, given a delimited string, returns the sum of the values.
 
 1. An empty string returns zero
 2. A single number returns the value
@@ -36,3 +40,19 @@ Made popular by [Roy Osherove](http://osherove.com/tdd-kata-1/). Write a method 
 7. Numbers greater than 1000 are ignored
 8. A single char delimiter can be defined on the first line starting with `//` (e.g. //#\n1#2 for a ‘#’ as the delimiter)
 9. A multi char delimiter can be defined on the first line starting with `//` (e.g. //###\n1###2 for ‘###’ as the delimiter)
+
+## Prime Factors
+Made popular by [Uncle Bob](http://butunclebob.com/ArticleS.UncleBob.ThePrimeFactorsKata).
+
+This kata demonstrates the [`transformation priority premise`](https://en.wikipedia.org/wiki/Transformation_Priority_Premise).
+
+Write a function `generate` under a module `PrimeFactors` that, given an integer, returns the list
+containing the prime factors in numerical sequence.
+
+1. 1 should return `[]`
+2. 2 should return `[2]`
+3. 3 should return `[3]`
+4. 4 should return `[2,2]`
+5. 6 should return `[2,3]`
+6. 8 should return `[2,2,2]`
+7. 9 should return `[3,3]`
