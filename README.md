@@ -27,6 +27,10 @@ Which means the workflow is:
 ## String Calculator
 Made popular by [Roy Osherove](http://osherove.com/tdd-kata-1/).
 
+* Try not to read ahead.
+* Do one task at a time. The trick is to learn to work incrementally.
+* Make sure you only test for correct inputs. there is no need to test for invalid inputs for this kata
+
 This kata is one of the simplest and best ways to practice step-by-step fluent tdd, and provides an easy way to get proficient in a language.
 
 Write a function `add` under a module `StringCalculator` that, given a delimited string, returns the sum of the values.
