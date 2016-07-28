@@ -1,7 +1,7 @@
-const StringCalculator = test.requireAbsolute('src/StringCalculator');
+const TestUtils = require('app-root-path').require('test/TestUtils');
+const StringCalculator = require('app-root-path').require('src/StringCalculator');
 
 describe('StringCalculator', () => {
-
   const params = [
     {
       description: 'empty string returns 0',
@@ -75,7 +75,7 @@ describe('StringCalculator', () => {
     }
   ];
 
-  test.parameterized('add', params, (index, param) => {
+  TestUtils.parameterized('add', params, (index, param) => {
     expect(StringCalculator.add(param.input)).toEqual(param.result);
   });
 

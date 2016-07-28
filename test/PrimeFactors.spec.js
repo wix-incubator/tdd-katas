@@ -1,8 +1,8 @@
-const PrimeFactors = test.requireAbsolute('src/PrimeFactors');
+const TestUtils = require('app-root-path').require('test/TestUtils');
+const PrimeFactors = require('app-root-path').require('src/PrimeFactors');
 
 describe('PrimeFactors', () => {
   describe('generate', () => {
-
     const params = [
       {
         description: 'transformation: null to constant',
@@ -53,7 +53,7 @@ describe('PrimeFactors', () => {
       }
     ];
 
-    test.parameterized('generates list of prime factors', params, (i, p) => {
+    TestUtils.parameterized('generates list of prime factors', params, (i, p) => {
       expect(PrimeFactors.generate(p.number)).toEqual(p.result);
     });
   });

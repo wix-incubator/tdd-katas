@@ -18,7 +18,7 @@ function hasCustomDelimiter(values) {
   return _.startsWith(values, '//');
 }
 function splitUsingCustomDelimiter(values) {
-  const match = /\/\/(.+)\n(.+)/.exec(values);
+  const match = (/\/\/(.+)\n(.+)/).exec(values);
   const delimiter = match[1];
   const valuesWithoutDelimiter = match[2];
   return _.split(valuesWithoutDelimiter, delimiter);

@@ -1,0 +1,6 @@
+{
+  "presets": [
+    "react-native-stage-0"
+  ],
+  "retainLines": true
+}
