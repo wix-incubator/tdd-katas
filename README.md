@@ -1,15 +1,3 @@
-# TDD Katas
-
-> Do not push to this repo, create a pull request instead
-
-## Usage
-Test files should be named ending with `.spec.js` and put under `test` or `spec` folder.
-Source files should be put under `src` folder.
-
-To run the tests, run `npm run test`.
-
-For a true TDD experience: use [wallaby.js](https://wallabyjs.com/) with the included `wallaby.js` file.
-
 ## The Three Rules of TDD
 
 1. You are not allowed to write any production code unless it is to make a failing unit test pass.
@@ -21,6 +9,11 @@ Which means the workflow is:
 1. Write a failing test. Stop writing the test as soon as it fails.
 2. Write the minimal production code required for the test to pass. Stop writing any code once the test passes.
 3. Refactor the test code and the production code without altering the functionality. All tests should pass.
+
+## Usage
+To run the tests, run `yarn run test`.
+
+For a true TDD experience: use [wallaby.js](https://wallabyjs.com/) with the included `wallaby.js` file.
 
 # Katas
 
@@ -34,17 +27,18 @@ Made popular by [Roy Osherove](http://osherove.com/tdd-kata-1/).
 
 This kata is one of the simplest and best ways to practice step-by-step fluent tdd, and provides an easy way to get proficient in a language.
 
-Write a function `add` under a module `StringCalculator` that, given a delimited string, returns the sum of the values.
+Write a method `add` under an object `StringCalculator` that, given a delimited string, returns the sum of the numbers in the string.
 
-1. An empty string returns zero
-2. A single number returns the value
-3. Two numbers, comma delimited, returns the sum
-4. Two numbers, newline delimited, returns the sum
-5. Three numbers, delimited either way, returns the sum
-6. Negative numbers throw an exception
+1. An empty string returns zero ('' => 0)
+2. A single number returns the value ('1' => 1, '2' => 2)
+3. Two numbers, comma delimited, returns the sum ('1,2' => 3, '10,20' => 30)
+4. Two numbers, newline delimited, returns the sum ('1\n2' => 3)
+5. Three numbers, delimited either way, returns the sum ('1\n2,3\n4' => 10)
+6. Negative numbers throw an exception (with the message 'negatives not allowed ${negatives}')
 7. Numbers greater than 1000 are ignored
 8. A single char delimiter can be defined on the first line starting with `//` (e.g. //#\n1#2 for a ‘#’ as the delimiter)
 9. A multi char delimiter can be defined on the first line starting with `//` (e.g. //###\n1###2 for ‘###’ as the delimiter)
+10. Multiple custom delimiters can be defined in square brackets (e.g. '//[###][;;;]\n1###2;;;3'  => 6)
 
 ## Prime Factors
 Made popular by [Uncle Bob](http://butunclebob.com/ArticleS.UncleBob.ThePrimeFactorsKata).

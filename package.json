@@ -2,30 +2,47 @@
   "name": "tdd-katas",
   "version": "1.0.0",
   "private": true,
+  "license": "MIT",
   "author": "Daniel Zlotin <zlotindaniel@gmail.com>",
+  "publishConfig": {
+    "registry": "none"
+  },
+  "bugs": {
+    "url": "https://github.com/wix-private/tdd-katas/issues"
+  },
+  "homepage": "https://github.com/wix-private/tdd-katas",
+  "readme": "https://github.com/wix-private/tdd-katas#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wix-private/tdd-katas.git"
+  },
+  "main": "src/index.js",
   "scripts": {
-    "build": "rm -rf lib && babel src -d lib",
-    "lint": "eslint src test",
-    "pretest": "npm run lint",
-    "test": "node jasmineUnitRunner"
+    "build": ":",
+    "test": "jest --coverage",
+    "release": ":"
   },
   "dependencies": {
-    "lodash": "^4.12.0",
-    "app-root-path": "^1.0.0",
-    "babel-cli": "^6.8.0",
-    "babel-core": "^6.8.0",
-    "babel-polyfill": "^6.8.0",
-    "babel-preset-react-native-stage-0": "^1.0.0",
-    "babel-register": "^6.8.0",
-    "jasmine": "^2.4.1",
-    "jasmine-reporters": "^2.1.1",
-    "jasmine-spec-reporter": "^2.4.0",
-    "jasmine-expect": "^2.0.2",
-    "proxyquire": "1.7.4",
-    "eslint": "^2.5.1",
-    "eslint-plugin-babel": "^3.0.0",
-    "eslint-plugin-react": "^4.2.3",
-    "eslint-plugin-react-native": "^1.0.0",
-    "babel-eslint": "^6.0.4"
+    "lodash": "4.x.x"
+  },
+  "devDependencies": {
+    "jest": "20.x.x",
+    "standard": "10.x.x"
+  },
+  "jest": {
+    "roots": [
+      "<rootDir>/node_modules/",
+      "<rootDir>/src/"
+    ],
+    "resetMocks": true,
+    "resetModules": true,
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    }
   }
 }

@@ -2,7 +2,7 @@
  * @param number {int}
  * @returns {Array<int>} prime factors
  */
-export function generate(number) {
+function generate(number) {
   const factors = [];
 
   for (let divisor = 2; number > 1; divisor++) {
@@ -13,3 +13,7 @@ export function generate(number) {
 
   return factors;
 }
+
+module.exports = {
+  generate
+};

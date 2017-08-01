@@ -1,4 +1,4 @@
-const BowlingGame = require('app-root-path').require('src/BowlingGame');
+const BowlingGame = require('./BowlingGame');
 
 describe('BowlingGame', () => {
   let game;
@@ -6,21 +6,6 @@ describe('BowlingGame', () => {
   beforeEach(() => {
     game = new BowlingGame();
   });
-
-  function rollMany(n, pins) {
-    for (let i = 0; i < n; i++) {
-      game.roll(pins);
-    }
-  }
-
-  function rollSpare() {
-    game.roll(5);
-    game.roll(5);
-  }
-
-  function rollStrike() {
-    game.roll(10);
-  }
 
   it('gutter game', () => {
     rollMany(20, 0);
@@ -51,4 +36,19 @@ describe('BowlingGame', () => {
     rollMany(12, 10);
     expect(game.getScore()).toEqual(300);
   });
+
+  function rollMany(n, pins) {
+    for (let i = 0; i < n; i++) {
+      game.roll(pins);
+    }
+  }
+
+  function rollSpare() {
+    game.roll(5);
+    game.roll(5);
+  }
+
+  function rollStrike() {
+    game.roll(10);
+  }
 });
