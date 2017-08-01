@@ -29,16 +29,16 @@ This kata is one of the simplest and best ways to practice step-by-step fluent t
 
 Write a method `add` under an object `StringCalculator` that, given a delimited string, returns the sum of the numbers in the string.
 
-1. An empty string returns zero ('' => 0)
-2. A single number returns the value ('1' => 1, '2' => 2)
-3. Two numbers, comma delimited, returns the sum ('1,2' => 3, '10,20' => 30)
-4. Two numbers, newline delimited, returns the sum ('1\n2' => 3)
-5. Three numbers, delimited either way, returns the sum ('1\n2,3\n4' => 10)
-6. Negative numbers throw an exception (with the message 'negatives not allowed ${negatives}')
+1. An empty string returns zero `'' => 0`
+2. A single number returns the value `'1' => 1` `'2' => 2`
+3. Two numbers, comma delimited, returns the sum `'1,2' => 3` `'10,20' => 30`
+4. Two numbers, newline delimited, returns the sum `'1\n2'` => 3`
+5. Three numbers, delimited either way, returns the sum `'1\n2,3\n4' => 10`
+6. Negative numbers throw an exception with the message `'negatives not allowed ${negatives}'`
 7. Numbers greater than 1000 are ignored
-8. A single char delimiter can be defined on the first line starting with `//` (e.g. //#\n1#2 for a ‘#’ as the delimiter)
-9. A multi char delimiter can be defined on the first line starting with `//` (e.g. //###\n1###2 for ‘###’ as the delimiter)
-10. Multiple custom delimiters can be defined in square brackets (e.g. '//[###][;;;]\n1###2;;;3'  => 6)
+8. A single char delimiter can be defined on the first line starting with `//` e.g `//#\n1#2` for a ‘#’ as the delimiter
+9. A multi char delimiter can be defined on the first line starting with `//` e.g. `//###\n1###2` for ‘###’ as the delimiter
+10. Multiple custom delimiters can be defined in square brackets (e.g. `'//[###][;;;]\n1###2;;;3'  => 6`)
 
 ## Prime Factors
 Made popular by [Uncle Bob](http://butunclebob.com/ArticleS.UncleBob.ThePrimeFactorsKata).
