@@ -36,9 +36,9 @@ Write a method `add` under an object `StringCalculator` that, given a delimited 
 5. Three numbers, delimited either way, returns the sum `'1\n2,3\n4' => 10`
 6. Negative numbers throw an exception with the message `'-1,2,-3' => 'negatives not allowed: -1,-3'`
 7. Numbers greater than 1000 are ignored
-8. A single char delimiter can be defined on the first line starting with `//` e.g `//#\n1#2` for a ‘#’ as the delimiter
-9. A multi char delimiter can be defined on the first line starting with `//` e.g. `//###\n1###2` for ‘###’ as the delimiter
-10. Multiple custom delimiters can be defined in square brackets (e.g. `'//[###][;;;]\n1###2;;;3'  => 6`)
+8. A single char delimiter can be defined on the first line starting with `//` (e.g `//#\n1#2` for a ‘#’ as the delimiter)
+9. A multi char delimiter can be defined on the first line starting with `//` (e.g. `//###\n1###2` for ‘###’ as the delimiter)
+10. Multiple custom delimiters can be defined in square brackets (e.g. `'//[###][;;;]\n1###2;;;3' => 6`)
 
 ## Prime Factors
 Made popular by [Uncle Bob](http://butunclebob.com/ArticleS.UncleBob.ThePrimeFactorsKata).
