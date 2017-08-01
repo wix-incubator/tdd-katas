@@ -19,7 +19,7 @@
   "main": "src/index.js",
   "scripts": {
     "build": ":",
-    "test": "jest --coverage",
+    "test": "semistandard && jest --coverage",
     "release": ":"
   },
   "dependencies": {
@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "jest": "20.x.x",
-    "standard": "10.x.x"
+    "semistandard": "11.x.x"
   },
   "jest": {
     "roots": [
