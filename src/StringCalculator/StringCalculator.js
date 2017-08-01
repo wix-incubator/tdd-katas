@@ -1,6 +1,8 @@
 class StringCalculator {
   add(numbers) {
-    if (!numbers) return 0;
+    if (!numbers) {
+      return 0;
+    }
 
     return this.sum(
       this.filterBiggerThan1000(
@@ -41,13 +43,12 @@ class StringCalculator {
   }
 
   assertNoNegatives(numArr) {
-    let negatives = numArr.filter((n) => n < 0);
+    const negatives = numArr.filter((n) => n < 0);
     if (negatives.length > 0) {
       throw new Error(`negatives not allowed: ${negatives}`);
     }
     return numArr;
   }
-
 
   sum(numArr) {
     return numArr.reduce((a, b) => a + b);
@@ -56,4 +57,4 @@ class StringCalculator {
 
 module.exports = {
   StringCalculator
-}
+};

@@ -19,7 +19,7 @@
   "main": "src/index.js",
   "scripts": {
     "build": ":",
-    "test": "semistandard && jest --coverage",
+    "test": "xo && jest --coverage",
     "release": ":"
   },
   "dependencies": {
@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "jest": "20.x.x",
-    "semistandard": "11.x.x"
+    "xo": "0.18.x"
   },
   "jest": {
     "roots": [
@@ -43,6 +43,24 @@
         "lines": 100,
         "statements": 100
       }
+    }
+  },
+  "xo": {
+    "space": true,
+    "env": [
+      "node",
+      "jest"
+    ],
+    "rules": {
+      "unicorn/filename-case": 0,
+      "arrow-parens": [
+        2,
+        "always"
+      ],
+      "object-curly-spacing": [
+        2,
+        "always"
+      ]
     }
   }
 }

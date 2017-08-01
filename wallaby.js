@@ -1,6 +1,4 @@
-/*eslint-disable*/
-'use strict';
-module.exports = function (wallaby) {
+module.exports = function () {
   return {
     env: {
       type: 'node',
@@ -19,7 +17,7 @@ module.exports = function (wallaby) {
       'src/**/*.test.js'
     ],
 
-    setup: function (w) {
+    setup: (w) => {
       w.testFramework.configure(require('./package.json').jest);
     }
   };
