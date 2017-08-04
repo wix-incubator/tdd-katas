@@ -1,57 +1,46 @@
 class StringCalculator {
-  add(numbers) {
-    if (!numbers) {
+  add(numbersString) {
+    if (!numbersString) {
       return 0;
     }
 
     return this.sum(
-      this.filterBiggerThan1000(
-        this.assertNoNegatives(
-          this.parseStringsToNumbers(
-            this.split(
-              this.parseStrSeperator(numbers)
-            )
-          )
+      this.assertNoNegatives(
+        this.filterOutGreaterThan1000(
+          this.splitAndParse(numbersString)
         )
       )
     );
   }
 
-  parseStrSeperator(rawStr) {
-    let str = rawStr;
-    let seperator = /,|\n/;
+  splitAndParse(numbersString) {
+    let delimiter = /,|\n/;
+    let rawString = numbersString;
 
-    if (rawStr.startsWith('//')) {
-      const split = rawStr.split('\n');
-      const firstLine = split[0];
-      str = split[1];
-      seperator = firstLine[2];
+    if (numbersString.startsWith('//')) {
+      const indexOfNewLine = numbersString.indexOf('\n');
+      delimiter = numbersString.substring(2, indexOfNewLine);
+      rawString = numbersString.substring(indexOfNewLine);
     }
-    return { str, seperator };
+
+    const strArr = rawString.split(delimiter);
+    return strArr.map(Number);
   }
 
-  split({ str, seperator }) {
-    return str.split(seperator);
+  filterOutGreaterThan1000(numbers) {
+    return numbers.filter((n) => n <= 1000);
   }
 
-  filterBiggerThan1000(numArr) {
-    return numArr.filter((n) => n <= 1000);
-  }
-
-  parseStringsToNumbers(strArr) {
-    return strArr.map((n) => Number(n));
-  }
-
-  assertNoNegatives(numArr) {
-    const negatives = numArr.filter((n) => n < 0);
+  assertNoNegatives(numbers) {
+    const negatives = numbers.filter((i) => i < 0);
     if (negatives.length > 0) {
       throw new Error(`negatives not allowed: ${negatives}`);
     }
-    return numArr;
+    return numbers;
   }
 
-  sum(numArr) {
-    return numArr.reduce((a, b) => a + b);
+  sum(numbers) {
+    return numbers.reduce((accumulator, element) => accumulator + element);
   }
 }
 
