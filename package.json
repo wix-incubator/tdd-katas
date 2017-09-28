@@ -8,25 +8,25 @@
     "registry": "none"
   },
   "bugs": {
-    "url": "https://github.com/wix-private/tdd-katas/issues"
+    "url": "https://github.com/wix/tdd-katas/issues"
   },
-  "homepage": "https://github.com/wix-private/tdd-katas",
-  "readme": "https://github.com/wix-private/tdd-katas#readme",
+  "homepage": "https://github.com/wix/tdd-katas",
+  "readme": "https://github.com/wix/tdd-katas#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/wix-private/tdd-katas.git"
+    "url": "https://github.com/wix/tdd-katas.git"
   },
   "main": "src/index.js",
   "scripts": {
     "build": ":",
-    "test": "xo && jest --coverage",
+    "test": "xo src/**/**/**/**/**/*.js && jest --coverage",
     "release": ":"
   },
   "dependencies": {
     "lodash": "4.x.x"
   },
   "devDependencies": {
-    "jest": "20.x.x",
+    "jest": "21.x.x",
     "xo": "0.18.x"
   },
   "jest": {
