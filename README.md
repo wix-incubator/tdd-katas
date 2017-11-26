@@ -11,7 +11,7 @@ Which means the workflow is:
 3. Refactor the test code and the production code without altering the functionality. All tests should pass.
 
 ## Usage
-To run the tests, run `yarn run test`.
+To run the tests, run `npm run test`.
 
 For a true TDD experience: use [wallaby.js](https://wallabyjs.com/) with the included `wallaby.js` file.
 
