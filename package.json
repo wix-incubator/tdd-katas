@@ -19,7 +19,7 @@
   "main": "src/index.js",
   "scripts": {
     "build": ":",
-    "test": "xo src/**/**/**/**/**/*.js && jest --coverage",
+    "test": "xo 'src/**/*.js' && jest --coverage",
     "watch": "jest --watch",
     "release": ":"
   },
@@ -27,8 +27,8 @@
     "lodash": "4.x.x"
   },
   "devDependencies": {
-    "jest": "21.x.x",
-    "xo": "0.18.x"
+    "jest": "23.x.x",
+    "xo": "0.21.x"
   },
   "jest": {
     "roots": [
