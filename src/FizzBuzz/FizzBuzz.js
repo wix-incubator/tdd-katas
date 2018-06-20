@@ -12,6 +12,7 @@ class FizzBuzz {
 
   fizzBuzz(n) {
     let result = '';
+
     _.forEach(this.rules, (word, num) => {
       if (n % num === 0) {
         result += word;
@@ -19,15 +20,15 @@ class FizzBuzz {
     });
     if (result) {
       return result;
-    } else {
-      return String(n);
     }
+
+    return String(n);
   }
 
   generate(range = { from: 1, to: 15 }) {
     const result = [];
     for (let i = range.from; i <= range.to; i++) {
-      result.push(this.fizzBuzz(i))
+      result.push(this.fizzBuzz(i));
     }
     return result;
   }

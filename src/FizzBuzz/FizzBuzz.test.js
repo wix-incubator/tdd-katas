@@ -54,9 +54,10 @@ describe(`FizzBuzz`, () => {
         '4',
         'Buzz',
         'Fizz',
-        '7']);
+        '7'
+      ]);
     });
-  })
+  });
 
   describe(`its configurable`, () => {
     it('additional numbers', () => {
@@ -67,7 +68,7 @@ describe(`FizzBuzz`, () => {
       expect(fizzBuzz.fizzBuzz(7)).toEqual('Foo');
       expect(fizzBuzz.fizzBuzz(11)).toEqual('Boo');
       expect(fizzBuzz.fizzBuzz(77)).toEqual('FooBoo');
-      expect(fizzBuzz.fizzBuzz(3*5*7*11)).toEqual('FizzBuzzFooBoo');
+      expect(fizzBuzz.fizzBuzz(3 * 5 * 7 * 11)).toEqual('FizzBuzzFooBoo');
     });
   });
 });
