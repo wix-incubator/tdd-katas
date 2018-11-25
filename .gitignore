@@ -45,6 +45,9 @@ jspm_packages
 ################
 .idea
 
+## vim
+*.swp
+
 ## File-based project format:
 *.iws
 
