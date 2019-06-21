@@ -36,6 +36,7 @@ class StringCalculator {
     if (negatives.length > 0) {
       throw new Error(`negatives not allowed: ${negatives}`);
     }
+
     return numbers;
   }
 

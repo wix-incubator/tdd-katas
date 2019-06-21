@@ -30,6 +30,7 @@ class FizzBuzz {
     for (let i = range.from; i <= range.to; i++) {
       result.push(this.fizzBuzz(i));
     }
+
     return result;
   }
 }

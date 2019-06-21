@@ -63,6 +63,6 @@ describe('Greeter', () => {
     expect(logger.log).not.toHaveBeenCalled();
     uut.greet('gandalf');
     expect(logger.log).toHaveBeenCalledTimes(1);
-    expect(logger.log).toHaveBeenCalledWith(`greeted Gandalf`);
+    expect(logger.log).toHaveBeenCalledWith('greeted Gandalf');
   });
 });

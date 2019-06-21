@@ -1,5 +1,5 @@
 /**
- * @param number {int}
+ * @param {int} number - number of primes to generate
  * @returns {Array<int>} prime factors
  */
 function generate(number) {

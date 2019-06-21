@@ -29,6 +29,7 @@ class Greeter {
     } else {
       greeting = 'Good night';
     }
+
     return greeting;
   }
 }

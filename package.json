@@ -24,11 +24,11 @@
     "release": ":"
   },
   "dependencies": {
-    "lodash": ">=4.17.5"
+    "lodash": "^4.17.1"
   },
   "devDependencies": {
-    "jest": "23.x.x",
-    "xo": "0.21.x"
+    "jest": "^24.8.0",
+    "xo": "^0.24.0"
   },
   "jest": {
     "roots": [

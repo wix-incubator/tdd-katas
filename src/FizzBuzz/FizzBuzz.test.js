@@ -1,13 +1,13 @@
 const { FizzBuzz } = require('./FizzBuzz');
 
-describe(`FizzBuzz`, () => {
+describe('FizzBuzz', () => {
   let fizzBuzz;
 
   beforeEach(() => {
     fizzBuzz = new FizzBuzz();
   });
 
-  describe(`fizzBuzz generates 1 number`, () => {
+  describe('fizzBuzz generates 1 number', () => {
     it('returns numbers as string, with multiples of 3 as Fizz', () => {
       expect(fizzBuzz.fizzBuzz(1)).toEqual('1');
       expect(fizzBuzz.fizzBuzz(2)).toEqual('2');
@@ -27,7 +27,7 @@ describe(`FizzBuzz`, () => {
     });
   });
 
-  describe(`generate`, () => {
+  describe('generate', () => {
     it('generates by default 15 numbers FizzBuzz...', () => {
       expect(fizzBuzz.generate()).toEqual([
         '1',
@@ -59,7 +59,7 @@ describe(`FizzBuzz`, () => {
     });
   });
 
-  describe(`its configurable`, () => {
+  describe('its configurable', () => {
     it('additional numbers', () => {
       fizzBuzz = new FizzBuzz({
         7: 'Foo',
