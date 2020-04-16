@@ -13,8 +13,8 @@ class FizzBuzz {
   fizzBuzz(n) {
     let result = '';
 
-    _.forEach(this.rules, (word, num) => {
-      if (n % num === 0) {
+    _.forEach(this.rules, (word, number) => {
+      if (n % number === 0) {
         result += word;
       }
     });

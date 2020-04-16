@@ -19,12 +19,12 @@ class StringCalculator {
 
     if (numbersString.startsWith('//')) {
       const indexOfNewLine = numbersString.indexOf('\n');
-      delimiter = numbersString.substring(2, indexOfNewLine);
-      rawString = numbersString.substring(indexOfNewLine);
+      delimiter = numbersString.slice(2, indexOfNewLine);
+      rawString = numbersString.slice(indexOfNewLine);
     }
 
-    const strArr = rawString.split(delimiter);
-    return strArr.map(Number);
+    const stringArray = rawString.split(delimiter);
+    return stringArray.map(Number);
   }
 
   filterOutGreaterThan1000(numbers) {
